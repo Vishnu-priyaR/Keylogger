@@ -62,7 +62,7 @@ def send_mail(sender,receiver,file):
     # Set up the SMTP server
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.starttls()
-    server.login(sender, '')
+    server.login('email_address', 'email_password')
     
     with open(file, 'rb') as f:
         attach = MIMEApplication(f.read(), _subtype='txt')
